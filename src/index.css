@@ -1,32 +1,65 @@
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* 1 rem = 10px */
+	font-size: 62.5%;
+}
+
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
+	/* colors */
+	--color-primary: #582a72;
+	--color-prim: 88, 42, 114;
+	--color-primary-dark-1: #3d1255;
+	--color-primary-dark-2: #260339;
+	--color-primary-light-1: #764b8e;
+	--color-primary-light-2: #9775aa;
 
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	--color-secondary: #aaaa39;
+	--color-secondary-light: #d4d46a;
+	--color-secondary-dark: #ffffaa;
 
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	--color-grey-light-1: #f7f7f7;
+	--color-grey-light-2: #eee;
+
+	--color-grey-dark: #adadad;
+	--color-grey-dark-2: #999;
+	--color-grey-dark-3: #333;
+
+	--color-white: #fff;
+	--color-black: #000;
 }
 
 a {
 	font-weight: 500;
-	color: #646cff;
+	color: var(--color-grey-light-1);
 	text-decoration: inherit;
 }
 a:hover {
-	color: #535bf2;
+	color: var(--color-primary-light-1);
 }
 
 body {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 1.6rem;
+	color: var(--color-grey-light-1);
+	line-height: 1.5;
+	font-weight: 400;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	margin: 0;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
-	border: 2px solid #535bf2;
+	align-items: center;
+	background-color: #582a72;
 }
 
 h1 {
@@ -35,19 +68,9 @@ h1 {
 }
 
 button {
-	border-radius: 8px;
-	border: 1px solid transparent;
-	padding: 0.6em 1.2em;
-	font-size: 1em;
-	font-weight: 500;
-	font-family: inherit;
-	background-color: #1a1a1a;
 	cursor: pointer;
-	transition: border-color 0.25s;
 }
-button:hover {
-	border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
@@ -67,34 +90,38 @@ button:focus-visible {
 }
 
 /* * * * * * * */
-/* * NAVBAR * */
+/* * LAYOUT * */
 /* * * * * * */
-
-.navbar {
+.page-container {
+	width: 98vw;
+	height: 92vh;
+	padding: 3rem 4rem;
+	background: linear-gradient(0deg, rgb(38, 3, 57, 0.6), rgb(38, 3, 57, 0.9)),
+		url("./assets/images/hero.jpg") no-repeat top right;
+	background-size: cover;
+	border-radius: 2rem;
+	border: 2px solid var(--color-primary-light-2);
+	overflow: hidden;
 	display: flex;
-	max-width: 900px;
-	min-height: 4rem;
-	flex: 3fr auto 2fr;
+	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
-	background-color: #213547;
-	width: 100vw;
 }
 
-.navbar > div {
-	border: 2px solid grey;
+.section-main {
+	flex-basis: 100%;
 }
 
-.navbar > div:first-of-type {
-	display: flex;
-	align-items: center;
-	width: 360px;
+/* * * * * * */
+/* * ICON * */
+/* * * * * */
+
+.dark-mode {
+	position: relative;
 }
 
-.links-container {
-	width: max-content;
-}
-
-.nav-link {
-	padding: 0 4rem;
+.dark-mode--icon {
+	font-size: 2rem;
+	position: absolute;
+	top: -10px;
+	left: -26px;
 }

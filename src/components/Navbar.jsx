@@ -1,27 +1,43 @@
-// import { default as links } from "../data";
 import { Link } from "react-router-dom";
 import { links } from "./../data";
 import Logo from "./Logo";
+import { MdOutlineWbSunny } from "react-icons/md";
+import Wrapper from "../assets/wrappers/Navbar";
+
 const Navbar = () => {
 	return (
-		<div className="navbar">
-			<div className="logo">
-				<Logo />
+		<Wrapper>
+			<div className="navbar">
+				<div className="navbar--divider"></div>
+				<div className="navbar--container">
+					<div className="logo">
+						<Logo />
+					</div>
+					<div className="links-container">
+						<nav>
+							{links.map((link, index) => {
+								const { href, text, special } = link;
+								console.log(special);
+
+								return special ? (
+									<button key={index} className="nav-link--special">
+										{text}
+									</button>
+								) : (
+									<Link to={href} key={index} className="nav-link">
+										{text}
+									</Link>
+								);
+							})}
+						</nav>
+					</div>
+					<div className="dark-mode">
+						<MdOutlineWbSunny className="dark-mode--icon" />
+					</div>
+				</div>
+				<div className="navbar--divider"></div>
 			</div>
-			<div className="links-container">
-				<nav>
-					{links.map((link, index) => {
-						const { href, text } = link;
-						return (
-							<Link to={href} key={index} className="nav-link">
-								{text}
-							</Link>
-						);
-					})}
-				</nav>
-			</div>
-			<div className="dark-mode">DARK-MODE ICON</div>
-		</div>
+		</Wrapper>
 	);
 };
 export default Navbar;

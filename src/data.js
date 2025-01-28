@@ -11,5 +11,5 @@ export const links = [
 		href: "/Projects",
 		text: "projects",
 	},
-	{ href: "#", text: "contact" },
+	{ href: "#", text: "contact", special: true },
 ];

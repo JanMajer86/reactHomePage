@@ -6,8 +6,8 @@ import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
 	<AppProvider>
-		<StrictMode>
-			<App />
-		</StrictMode>
+		{/* <StrictMode> */}
+		<App />
+		{/* </StrictMode> */}
 	</AppProvider>
 );

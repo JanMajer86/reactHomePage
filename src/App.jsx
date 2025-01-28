@@ -30,8 +30,6 @@ const router = createBrowserRouter([
 function App() {
 	const { isModalOpen } = useGlobalContext();
 
-	console.log(isModalOpen);
-
 	return <RouterProvider router={router} />;
 }
 
