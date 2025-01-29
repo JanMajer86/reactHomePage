@@ -21,8 +21,9 @@ html {
 	--color-primary-light-2: #9775aa;
 
 	--color-secondary: #aaaa39;
-	--color-secondary-light: #d4d46a;
-	--color-secondary-dark: #ffffaa;
+	--color-secondary-light: #ffffaa;
+	--color-secondary-dark: #d4d46a;
+	--color-secondary-dark-2: #808015;
 
 	--color-grey-light-1: #f7f7f7;
 	--color-grey-light-2: #eee;
@@ -45,21 +46,19 @@ a:hover {
 }
 
 body {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: "Funnel Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 	font-size: 1.6rem;
 	color: var(--color-grey-light-1);
 	line-height: 1.5;
-	font-weight: 400;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	margin: 0;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #582a72;
+	background-color: var(--color-primary);
 }
 
 h1 {
@@ -67,34 +66,42 @@ h1 {
 	line-height: 1.1;
 }
 
+h3 {
+	font-size: 1.8rem;
+	letter-spacing: 0.2rem;
+	font-weight: 200;
+}
+
 button {
 	cursor: pointer;
 }
 
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
+.btn--secondary {
+	padding: 0.2rem 1rem;
+	margin: 0 4rem;
+	font-weight: 600;
+	border-radius: 0.6rem;
+	color: var(--color-secondary-light);
+	background-color: var(--color-secondary);
+	border: 2px solid var(--color-secondary-dark-2);
+	transition: all 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
+.btn--secondary:hover {
+	color: var(--color-secondary-dark);
+	background-color: var(--color-secondary-dark-2);
 }
 
 /* * * * * * * */
 /* * LAYOUT * */
 /* * * * * * */
+.page {
+	height: 100%;
+	padding: 4rem;
+}
+
 .page-container {
-	width: 98vw;
-	height: 92vh;
+	height: calc(100vh - 8rem);
 	padding: 3rem 4rem;
 	background: linear-gradient(0deg, rgb(38, 3, 57, 0.6), rgb(38, 3, 57, 0.9)),
 		url("./assets/images/hero.jpg") no-repeat top right;
@@ -115,7 +122,7 @@ button:focus-visible {
 /* * ICON * */
 /* * * * * */
 
-.dark-mode {
+.dark-mode--container {
 	position: relative;
 }
 

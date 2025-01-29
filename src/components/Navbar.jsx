@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { links } from "./../data";
+import { navbarLinks } from "../data";
 import Logo from "./Logo";
 import { MdOutlineWbSunny } from "react-icons/md";
 import Wrapper from "../assets/wrappers/Navbar";
@@ -15,12 +15,11 @@ const Navbar = () => {
 					</div>
 					<div className="links-container">
 						<nav>
-							{links.map((link, index) => {
+							{navbarLinks.map((link, index) => {
 								const { href, text, special } = link;
-								console.log(special);
 
 								return special ? (
-									<button key={index} className="nav-link--special">
+									<button key={index} className="btn btn--secondary">
 										{text}
 									</button>
 								) : (
@@ -31,7 +30,7 @@ const Navbar = () => {
 							})}
 						</nav>
 					</div>
-					<div className="dark-mode">
+					<div className="dark-mode--container">
 						<MdOutlineWbSunny className="dark-mode--icon" />
 					</div>
 				</div>

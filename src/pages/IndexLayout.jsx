@@ -4,15 +4,16 @@ import Footer from "../components/Footer";
 
 const IndexLayout = () => {
 	return (
-		<div className="page-container">
-			<Navbar />
-			<main className="section-main">
-				pages will be displayed here
-				<section className="page">
-					<Outlet />
-				</section>
-			</main>
-			<Footer />
+		<div className="page">
+			<div className="page-container">
+				<Navbar />
+				<main className="section-main">
+					<section className="page">
+						<Outlet />
+					</section>
+				</main>
+				<Footer />
+			</div>
 		</div>
 	);
 };
