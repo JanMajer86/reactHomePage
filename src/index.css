@@ -16,11 +16,13 @@ html {
 	--color-primary: #582a72;
 	--color-prim: 88, 42, 114;
 	--color-primary-dark-1: #3d1255;
+	--color-prim-dark: 38, 3, 57;
 	--color-primary-dark-2: #260339;
 	--color-primary-light-1: #764b8e;
 	--color-primary-light-2: #9775aa;
 
-	--color-secondary: #aaaa39;
+	--color-secondary: rgb(170, 170, 57);
+	--color-second: 170, 170, 57;
 	--color-secondary-light: #ffffaa;
 	--color-secondary-dark: #d4d46a;
 	--color-secondary-dark-2: #808015;
@@ -103,7 +105,11 @@ button {
 .page-container {
 	height: calc(100vh - 8rem);
 	padding: 3rem 4rem;
-	background: linear-gradient(0deg, rgb(38, 3, 57, 0.6), rgb(38, 3, 57, 0.9)),
+	background: linear-gradient(
+			0deg,
+			rgb(var(--color-prim-dark), 0.6),
+			rgb(var(--color-prim-dark), 0.9)
+		),
 		url("./assets/images/hero.jpg") no-repeat top right;
 	background-size: cover;
 	border-radius: 2rem;

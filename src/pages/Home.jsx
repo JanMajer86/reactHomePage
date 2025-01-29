@@ -16,10 +16,17 @@ const Home = () => {
 						</h1>
 						<h3>FullStack Web Developer</h3>
 					</div>
-					<p>
-						Building handcrafted website experiences, that actually also work
-					</p>
-					<button className="btn btn--secondary">download cv</button>
+					<div className="card--info">
+						<div>
+							<p>
+								Building handcrafted, human-coded website experiences, that
+								actually also work. No page builders or WordPress.
+							</p>
+						</div>
+						<div className="card--button-container">
+							<button className="btn btn--secondary">download cv</button>
+						</div>
+					</div>
 				</div>
 				<div className="card"> </div>
 			</div>
