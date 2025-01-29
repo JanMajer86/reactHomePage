@@ -7,14 +7,20 @@ const Home = () => {
 				<div className="card"> </div>
 				<div className="card card--main">
 					<div className="card--header">
-						<h3 className="subheading">Hi, How Are You?</h3>
+						<h3 className="subheading">
+							<span>Hi, How Are You?</span>
+						</h3>
 						<h1>
-							<span>I'm</span>{" "}
-							<em>
-								<i>Jan</i>
-							</em>
+							<span>
+								I'm{" "}
+								<em>
+									<i>Jan</i>
+								</em>
+							</span>
 						</h1>
-						<h3>FullStack Web Developer</h3>
+						<h3>
+							<span>FullStack Web Developer</span>
+						</h3>
 					</div>
 					<div className="card--info">
 						<div>

@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 		height: 40rem;
 		display: flex;
 		flex-direction: column;
-		/* justify-content: space-between; */
+		overflow: hidden;
 		border-radius: 1.2rem;
 		border: 4px solid var(--color-primary);
 	}
@@ -25,6 +25,7 @@ const Wrapper = styled.div`
 	.card--header {
 		padding: 5rem 2rem;
 		color: var(--color-primary-dark-2);
+		height: 60%;
 		font-weight: 600;
 		background: linear-gradient(
 				to bottom,
@@ -35,9 +36,13 @@ const Wrapper = styled.div`
 		background-size: cover;
 		border-bottom: 4px solid var(--color-secondary);
 	}
-
+	.card--header span {
+		background-color: var(--color-secondary-dark-2);
+		line-height: 1.35;
+	}
 	.card--info {
-		padding: 1rem 2rem;
+		padding: 2rem 3.2rem;
+		background-color: var(--color-primary-dark-2);
 		height: 100%;
 		display: flex;
 		flex-direction: column;
