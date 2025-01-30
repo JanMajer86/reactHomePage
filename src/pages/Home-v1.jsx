@@ -1,7 +1,7 @@
 import Wrapper from "../assets/wrappers/Home";
 import { techStack } from "../data";
 
-const Home = () => {
+const HomeV1 = () => {
 	return (
 		<Wrapper>
 			<div className="home">
@@ -64,4 +64,4 @@ const Home = () => {
 		</Wrapper>
 	);
 };
-export default Home;
+export default HomeV1;

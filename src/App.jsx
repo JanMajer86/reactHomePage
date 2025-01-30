@@ -3,6 +3,7 @@ import { useGlobalContext } from "./context";
 import IndexLayout from "./pages/IndexLayout";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import HomeV1 from "./pages/Home-v1";
 import Projects from "./pages/Projects";
 import Error from "./pages/Error";
 
