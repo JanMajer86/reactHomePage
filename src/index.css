@@ -110,12 +110,11 @@ button {
 /* * LAYOUT * */
 /* * * * * * */
 .page {
-	height: 100%;
 	padding: 4rem;
 }
 
 .page-container {
-	height: calc(100vh - 8rem);
+	/* height: calc(100vh - 8rem); */
 	max-width: 130rem;
 	padding: 3rem 4rem;
 	margin: 0 auto;
@@ -125,6 +124,7 @@ button {
 			rgb(var(--color-prim-dark), 0.9)
 		),
 		url("./assets/images/hero.jpg") no-repeat top right;
+	background-attachment: fixed;
 	background-size: cover;
 	border-radius: 2rem;
 	border: 2px solid var(--color-primary-light-2);
@@ -133,10 +133,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
-
-.section-main {
-	flex-basis: 100%;
+	margin-bottom: 4rem;
 }
 
 /* * * * * * */

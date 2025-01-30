@@ -1,19 +1,23 @@
-import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Home from "./Home";
 
 const IndexLayout = () => {
 	return (
 		<div className="page">
 			<div className="page-container">
 				<Navbar />
-				<main className="section-main">
-					<section className="page">
-						<Outlet />
-					</section>
-				</main>
+			</div>
+			<div className="page-container">
+				<Home />
+			</div>
+			<div className="page-container">
 				<Footer />
 			</div>
+			{/* <main className="section-main">
+				<section className="page"></section>
+			</main>
+			<Footer /> */}
 		</div>
 	);
 };

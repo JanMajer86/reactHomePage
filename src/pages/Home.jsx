@@ -1,4 +1,14 @@
 import Card from "./../components/Card";
+
+import {
+	CardOneTop,
+	CardOneBottom,
+	CardTwoTop,
+	CardTwoBottom,
+	CardThreeTop,
+	CardThreeBottom,
+} from "./../components/CartContent";
+
 import tactical from "./../assets/images/tacticalcomputerterminal.jpg";
 import terminal from "./../assets/images/falloutTerminal.jpg";
 import studio from "./../assets/images/studio.jpg";
@@ -24,8 +34,8 @@ const Home = () => {
 				bgImg={terminal}
 				bgPosition="center"
 				bgSize="180% auto"
-				topSegmentContent="tech"
-				bottomSegmentContent="tech stack list goes here"
+				topSegmentContent={<CardOneTop />}
+				bottomSegmentContent={<CardOneBottom />}
 			/>
 			<Card
 				top={true}
@@ -35,8 +45,8 @@ const Home = () => {
 				bgImg={tactical}
 				bgPosition="top"
 				bgSize="cover"
-				topSegmentContent="introduce yourself"
-				bottomSegmentContent="introduce yourself even more"
+				topSegmentContent={<CardTwoTop />}
+				bottomSegmentContent={<CardTwoBottom />}
 			/>
 			<Card
 				top={false}
@@ -46,8 +56,8 @@ const Home = () => {
 				bgImg={studio}
 				bgPosition="center"
 				bgSize="auto 100%"
-				topSegmentContent="maybe a photo"
-				bottomSegmentContent="very short bio"
+				topSegmentContent={<CardThreeTop />}
+				bottomSegmentContent={<CardThreeBottom />}
 			/>
 		</div>
 	);

@@ -1,37 +1,11 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useGlobalContext } from "./context";
 import IndexLayout from "./pages/IndexLayout";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import HomeV1 from "./pages/Home-v1";
 import Projects from "./pages/Projects";
 import Error from "./pages/Error";
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <IndexLayout />,
-		errorElement: <Error />,
-		children: [
-			{
-				index: true,
-				element: <Home />,
-				errorElement: <Error />,
-			},
-			{
-				path: "/About",
-				element: <About />,
-				errorElement: <Error />,
-			},
-			{ path: "/Projects", element: <Projects />, errorElement: <Error /> },
-		],
-	},
-]);
-
 function App() {
-	const { isModalOpen } = useGlobalContext();
-
-	return <RouterProvider router={router} />;
+	return <IndexLayout />;
 }
 
 export default App;

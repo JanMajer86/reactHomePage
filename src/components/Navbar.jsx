@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { navbarLinks } from "../data";
 import Logo from "./Logo";
 import { MdOutlineWbSunny } from "react-icons/md";
@@ -23,9 +22,9 @@ const Navbar = () => {
 										{text}
 									</button>
 								) : (
-									<Link to={href} key={index} className="nav-link">
+									<a href={href} key={index} className="nav-link">
 										{text}
-									</Link>
+									</a>
 								);
 							})}
 						</nav>

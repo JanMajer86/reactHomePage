@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
 	.navbar {
-		margin-bottom: 2rem;
-		min-height: 4rem;
-		flex-shrink: 0;
+		/* margin-bottom: 2rem; */
+		/* min-height: 4rem; */
 	}
 
 	.navbar--divider {

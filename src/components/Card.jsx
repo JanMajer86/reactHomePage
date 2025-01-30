@@ -17,8 +17,12 @@ const Wrapper = styled.div`
 		border-bottom: 4px solid;
 		border-color: inherit;
 	}
+
+	.card--top > div {
+		height: 100%;
+	}
 	.card--bottom {
-		padding: 2rem 3.2rem;
+		/* padding: 2rem; */
 		display: flex;
 		flex-direction: column;
 	}
@@ -36,7 +40,6 @@ const Card = ({
 	bottomSegmentContent,
 }) => {
 	const gradientBackground = `linear-gradient(to bottom,rgba(${gradientColor}, 0.6),rgba(${gradientColor}, 0.9)),url("${bgImg}") ${bgPosition}`;
-	console.log(gradientBackground);
 
 	const topCardStyle = {
 		height: top ? "60%" : "40%",
