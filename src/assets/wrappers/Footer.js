@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
 	.footer {
 		margin-top: 2rem;
+		flex-shrink: 0;
 	}
 	.footer--divider {
 		width: 100%;

@@ -14,14 +14,15 @@ html {
 :root {
 	/* colors */
 	--color-primary: #582a72;
-	--color-prim: 88, 42, 114;
 	--color-primary-dark-1: #3d1255;
-	--color-prim-dark: 38, 3, 57;
 	--color-primary-dark-2: #260339;
+	--color-primary-dark-3: #1a0d22;
 	--color-primary-light-1: #764b8e;
 	--color-primary-light-2: #9775aa;
+	--color-prim: 88, 42, 114;
+	--color-prim-dark: 38, 3, 57;
 
-	--color-secondary: rgb(170, 170, 57);
+	--color-secondary: #aaaa39;
 	--color-second: 170, 170, 57;
 	--color-secondary-light: #ffffaa;
 	--color-secondary-dark: #d4d46a;
@@ -60,7 +61,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	margin: 0;
-	background-color: var(--color-primary);
+	background-color: var(--color-primary-dark-3);
 }
 
 h1 {
@@ -76,6 +77,17 @@ h3 {
 
 button {
 	cursor: pointer;
+}
+
+.btn--primary {
+	padding: 0.4rem 2rem;
+	margin: 0 4rem;
+	font-weight: 600;
+	border-radius: 0.6rem;
+	color: var(--color-white);
+	background-color: var(--color-primary-light-1);
+	border: 2px solid var(--color-primary);
+	transition: all 0.3s;
 }
 
 .btn--secondary {
@@ -104,7 +116,9 @@ button {
 
 .page-container {
 	height: calc(100vh - 8rem);
+	max-width: 130rem;
 	padding: 3rem 4rem;
+	margin: 0 auto;
 	background: linear-gradient(
 			0deg,
 			rgb(var(--color-prim-dark), 0.6),
@@ -115,6 +129,7 @@ button {
 	border-radius: 2rem;
 	border: 2px solid var(--color-primary-light-2);
 	overflow: hidden;
+	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
